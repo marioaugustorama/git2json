@@ -64,7 +64,7 @@ def run_git_log(git_dir=None):
             '--pretty=raw'
         ]
     else:
-        command = ['git', 'log', '--numstat', '--pretty=raw']
+        command = ['git', 'log', '--numstat', '--pretty=raw', '-1']
     raw_git_log = subprocess.Popen(
         command,
         stdout=subprocess.PIPE

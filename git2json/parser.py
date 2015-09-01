@@ -14,6 +14,7 @@ __email__ = 'tavisharmstrong@gmail.com'
 __version__ = '0.2.1'
 
 import re
+import time
 
 PAT_COMMIT = r'''
 (
@@ -119,7 +120,7 @@ def parse_person_line(line, name):
         d_result = {
             'name': name,
             'email': email,
-            'date': timestamp,
+            'date': time.ctime(int(timestamp)),
             'timezone': timezone,
         }
         return d_result
